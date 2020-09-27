@@ -15,12 +15,17 @@ composer require thecoderszone/enum
 <?php
 
 use TCZ\Enum\Enumerable;
+// use TCZ\Enum\AsciiEnum;
 use Animals\Cat;
 use Animals\Dog;
 use Animals\Kangaroo;
 
 class Pet extends Enumerable
 {
+    // AsciiEnum defaults labels to values, ideal for text based use cases.
+    // N.B. Pet::getLabels() would return Pet::getValues(), as opposed to the $labels array.
+    // use AsciiEnum;
+
     public const CAT = 1;
 
     public const DOG = 2;
