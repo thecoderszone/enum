@@ -47,12 +47,12 @@ class Enumerable
      */
     public static function getValues()
     {
-        if (static::$cache) {
-            return static::$cache;
+        if (self::$cache) {
+            return self::$cache;
         }
         
         try {
-            return static::$cache = (new ReflectionClass(static::class))->getConstants();
+            return self::$cache = (new ReflectionClass(static::class))->getConstants();
         } catch (ReflectionException $exception) {
             return [];
         }
