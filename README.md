@@ -47,12 +47,30 @@ class Pet extends Enumerable
 ```
 `Enumerable` types include functions for translating between values, labels and native objects.  
 
-`Pet::getLabel(Pet::CAT); // => 🐈 Get the label for a value`  
-`Pet::getValue('🦮'); // => 2 Get the value for a label`  
-`Pet::getClass(Pet::KANGAROO); // => 'Animal\Kangaroo' Get the class for a value`  
-`Pet::create(Pet::DOG, $breed = 'labrador'); // => Dog([breed] => 'labrador') Create an object for a value, supplying any remaining parameters to the constructor.`  
-`Pet::isValid(1); // => true Determine if a value is valid`  
-`Pet::serialize(Dog::class); // => 2 Get the value for a class`  
-`Pet::getValues(); // => [1, 2, 3] Get possible values`  
-`Pet::getLabels(); // => [1 => '🐈', 2 => '🦮', 3 => '🦘'] Get possible labels`  
-`Pet::getClasses(); // => [1 => 'Animal\Cat', 2 => 'Animal\Dog', 3 => 'Animal\Kangaroo'] Get possible classes`
+```php
+Pet::getLabel(Pet::CAT); // => 🐈 Get the label for a value`
+```
+```php
+Pet::getValue('🦮'); // => 2 Get the value for a label
+```
+```php
+Pet::getClass(Pet::KANGAROO); // => 'Animal\Kangaroo' Get the class for a value
+``` 
+```php
+Pet::create(Pet::DOG, $breed = 'labrador'); // => Dog([breed] => 'labrador') Create an object for a value, supplying any remaining parameters to the constructor.
+``` 
+```php
+Pet::isValid(1); // => true Determine if a value is valid
+```
+```php
+Pet::serialize(Dog::class); // => 2 Get the value for a class
+``` 
+```php
+Pet::getValues(); // => [1, 2, 3] Get possible values
+```
+```php
+Pet::getLabels(); // => [1 => '🐈', 2 => '🦮', 3 => '🦘'] Get possible labels
+```
+```php
+Pet::getClasses(); // => [1 => 'Animal\Cat', 2 => 'Animal\Dog', 3 => 'Animal\Kangaroo'] Get possible classes
+```
